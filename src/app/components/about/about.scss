@@ -100,6 +100,13 @@
 
 @media (max-width: 900px) {
   .about-inner { grid-template-columns: 1fr; gap: 40px; }
-  .visual-wrapper { height: 300px; }
+  .visual-wrapper { height: 280px; }
   .section-title { text-align: center !important; }
+  .accent-card { top: 5%; left: 0; }
+  .accent-card-2 { bottom: 5%; right: 0; }
+}
+
+@media (max-width: 480px) {
+  .visual-wrapper { display: none; }
+  .about-content .btn { width: 100%; justify-content: center; }
 }

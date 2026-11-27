@@ -100,9 +100,10 @@ form {
 
 @media (max-width: 900px) {
   .contact-inner { grid-template-columns: 1fr; }
-  .form-wrapper { padding: 28px; }
+  .form-wrapper { padding: 24px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .form-row { grid-template-columns: 1fr; }
+  .submit-btn { font-size: 0.9rem; }
 }

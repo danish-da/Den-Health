@@ -114,10 +114,12 @@
 }
 
 @media (max-width: 900px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom .container { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-bottom p { font-size: 0.75rem; }
+  .footer-links { gap: 16px; }
 }

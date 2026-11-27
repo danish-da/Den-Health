@@ -164,6 +164,14 @@
   .hero-content p { margin: 0 auto 36px; }
   .hero-actions { justify-content: center; }
   .hero-stats { justify-content: center; }
-  .hero-visual { height: 320px; }
-  .card-main { width: 220px; }
+  .hero-visual { height: 300px; }
+  .card-main { width: 200px; }
+}
+
+@media (max-width: 480px) {
+  .hero-visual { display: none; }
+  .hero-content .badge { font-size: 0.75rem; padding: 6px 14px; }
+  .hero-stats { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
 }
