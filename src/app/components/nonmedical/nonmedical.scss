@@ -1,0 +1,93 @@
+.nonmedical {
+  background: linear-gradient(180deg, #0a1628 0%, #071220 100%);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 210, 150, 0.4), transparent);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 210, 150, 0.06), transparent 70%);
+    bottom: -100px;
+    left: -100px;
+    pointer-events: none;
+  }
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  position: relative;
+  padding: 36px 28px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: translateY(-8px) rotateX(3deg);
+    box-shadow: 0 20px 60px rgba(0, 210, 150, 0.15);
+    border-color: rgba(0, 210, 150, 0.25);
+
+    .card-glow { opacity: 1; }
+    .product-icon { transform: scale(1.1) rotateY(15deg); }
+  }
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(0, 210, 150, 0.07) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.product-icon {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  display: block;
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  color: #00d296;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: letter-spacing 0.3s;
+
+  &:hover { letter-spacing: 0.5px; }
+}
+
+@media (max-width: 900px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }

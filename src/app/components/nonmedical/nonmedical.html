@@ -1,0 +1,20 @@
+<section class="nonmedical" id="nonmedical">
+  <div class="container">
+    <div class="section-title">
+      <span>Non-Medical Equipment</span>
+      <h2>Non-Medical Supplies</h2>
+    </div>
+
+    <div class="products-grid">
+      @for (product of products; track product.title) {
+        <div class="product-card glass">
+          <div class="card-glow"></div>
+          <div class="product-icon">{{ product.icon }}</div>
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.desc }}</p>
+          <a href="#contact" class="card-link">Enquire Now →</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

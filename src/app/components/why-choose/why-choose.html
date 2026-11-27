@@ -1,0 +1,26 @@
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-title">
+      <span>Why DenHealth</span>
+      <h2>The DenHealth Difference</h2>
+    </div>
+
+    <div class="reasons-grid">
+      @for (reason of reasons; track reason.title) {
+        <div class="reason-card glass">
+          <div class="reason-icon">{{ reason.icon }}</div>
+          <h3>{{ reason.title }}</h3>
+          <p>{{ reason.desc }}</p>
+        </div>
+      }
+    </div>
+
+    <div class="cta-banner glass">
+      <div class="cta-content">
+        <h3>Ready to Place a Bulk Order?</h3>
+        <p>Get custom pricing for your hospital, clinic, or business today.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Get a Quote →</a>
+    </div>
+  </div>
+</section>
